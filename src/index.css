@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --primary: hsl(25, 97%, 53%);
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-300: hsl(217, 12%, 63%);
+  --neutral-500: hsl(216, 12%, 54%);
+  --neutral-700: hsl(213, 19%, 18%);
+  --neutral-900: hsl(216, 12%, 8%);
+
+  --font-md: 15px;
+  --font-lg: 2rem;
+
+  --font-reg: 400;
+  --font-bold: 700;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--neutral-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center{
+  text-align: center;
+}
+
+
+h2{
+  font-size: var(--font-lg);
+  color: var(--neutral-100);
+  padding: 2rem 0 .5rem;
+}
+p{
+  color: var(--neutral-300);
+  padding: .5rem 0;
+}
+
+.container{
+  background-color: var(--neutral-700);
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+.container.thx{
+  align-items: center;
+}
+.containerBtn{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 1.5rem 0 2rem;
+}
+.rate__btn, .starIcon{
+  --wh: 50px;
+  width: var(--wh);
+  height: var(--wh);
+  border-radius: 50%;
+  color: var(--neutral-300);
+  background-color: var(--neutral-700);
+  filter: brightness(140%);
+  border: none;
+}
+.rate__btn:hover{
+  background-color: var(--primary);
+  color: var(--neutral-100);
+  filter: brightness(100%);
+}
+.rate__btn.active{
+  color: var(--neutral-100);
+  background-color: var(--neutral-500);
+  filter: brightness(100%);
+}
+.starIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit{
+  font-weight: var(--font-bold);
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--primary);
+  color: var(--neutral-100);
+  border: none;
+}
+.submit:hover{
+  background-color: var(--neutral-100);
+  color: var(--primary);
+}
+
+.selected{
+  margin: 1.5rem 0 0;
+  display: block;
+  color: var(--primary);
+  background-color: var(--neutral-700);
+  filter: brightness(140%);
+  font-weight: var(--font-reg);
+  font-size: var(--font-md);
+  padding: .3rem 1rem;
+  line-height: var(--font-md);
+  border-radius: 20px;
 }
